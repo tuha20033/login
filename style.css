@@ -8,7 +8,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: url(/bgr.png);
+    background: url('./bgr.png');
     height: 100vh;
 }
 .main{
@@ -27,7 +27,7 @@ body{
     border-radius: 5px 5px 0 0 ;
     height: 76px;
     width: 101%;
-    background:url(/bgrheader.png);
+    background:url('./bgr.png');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +52,7 @@ body{
    color: white;
 }
 .bgr-icon{
-    background:url(/bgrheader.png);
+    background:url('./bgrheader.png');
     width:43.5px;
     height:43px;
     transform: translateY(-30px) translateX(0px); 
@@ -100,7 +100,7 @@ label{
     outline: none;
     border-radius: 5px;
     border:none;
-    background: url(/bgrheader.png);
+    background: url('./bgrheader.png');
     color: white;
     font-weight: bold;
     font-size: 20px;

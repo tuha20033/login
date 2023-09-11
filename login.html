@@ -13,8 +13,8 @@
         <div class="main">
             <div class="header"> Login Form</div>
             <form action="" class="form">
-               <div class="form-user"><div class="bgr-icon"><i class="fa-solid fa-user user icon "></i></div><input type="text" class="form-ip" size="39px" placeholder="Email or phone" id="user"></div>
-               <div class="form-password"><div class="bgr-icon"><i class="fa-solid fa-lock  pass icon"></i></div><input type="password" class="form-ip "size="39px" placeholder="password" id="password"></div> 
+               <div class="form-user"><div class="bgr-icon"><i class="fa-solid fa-user user icon "></i></div><input type="email" class="form-ip" size="39px" placeholder="Email " id="email" required></div>
+               <div class="form-password"><div class="bgr-icon"><i class="fa-solid fa-lock  pass icon"></i></div><input type="password" class="form-ip "size="39px" placeholder="password" id="password" required></div> 
                <label for="">
                 <a href="">Forget password?</a>
                </label>
@@ -23,31 +23,26 @@
                </label>
             </form> 
                 <button class="btn" id="btn-login">Login</button>
-              <div class="text-f">  <p>Not a menber?<a href=""> Singup now</a></p></div>
+              <div class="text-f">  <p>Not a menber?<a href="./signup.html"> Singup now</a></p></div>
         </div>
     </div>
     <script>
        
-var btn = document.getElementById('btn-login')
-btn.onclick = function(){
-     const user = document.getElementById('user');
-     const Password = document.getElementById('text3');
-        var flag = false;
-        if((user.value.length>0)
-        &&(password.value.length>0)
-        )
-        {flag=true};
-        if(flag==true){
-            user_data= user.value;
-            localStorage.setItem("user",user_data);
-            password_data = password.value;
-            localStorage.setItem("password",password_data);
-            alert('Đăng nhập thành công hệ thống sẽ đưa bạn đến trang ')
-            window.location.href = "/login/login.html";
-        }
-        else  {alert("Đăng nhập không thành công xin vui lòng thử lại ");};
-
+       var btnlogin = document.getElementById('btn-login')
+      btnlogin.onclick = function(){
+    const email = document.getElementById('email')
+    const password = document.getElementById('password')
+    if( (localStorage.getItem("email") == email.value)
+        &&(localStorage.getItem("password") == password.value)
+    ){
+       localStorage.setItem("signincheck","true")
+       alert("Đăng nhập thành công hệ thống sẽ đưa bạn về trang chủ")
+       window.location.href = "#"
     }
+    else{
+        alert(" Sai tên đăng nhập hoặc mật khẩu ")
+    }
+}
     </script>
 </body>
 </html>
