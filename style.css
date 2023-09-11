@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background: url(/bgr.png);
+    height: 100vh;
+}
+.main{
+    
+    background-color: white;
+    width: 395px;
+    height: 430px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.main .header{
+    border-radius: 5px 5px 0 0 ;
+    height: 76px;
+    width: 101%;
+    background:url(/bgrheader.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    transform: translateY(-1px) translateX(-1px);
+
+}
+.form-user{
+    display: flex;
+    transform: translateY(10px);
+  
+}
+.form-password{
+    display: flex;
+    transform: translateY(-30px);
+}
+.icon{
+   font-size: 20px;
+   border-radius: 5px 0 0 5px;
+   color: white;
+}
+.bgr-icon{
+    background:url(/bgrheader.png);
+    width:43.5px;
+    height:43px;
+    transform: translateY(-30px) translateX(0px); 
+    display: flex;
+   justify-content:center ;
+   align-items: center;
+   border-radius: 5px 0 0 5px;
+}
+.form div{
+    margin-top: 30px;
+    margin-left: 15px;
+
+}
+.form-ip{
+    height: 43px;
+    outline: none;
+    border: 1px solid gray;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+
+}
+input{
+    padding-left: 5px;
+}
+.form-ip::placeholder{
+    transform: translateX(10px);
+}
+
+label{
+    margin-left: 35px;
+  position: relative;
+  top:-50px
+}
+ a{
+    text-decoration: none;
+    color:rgb(72, 209, 164);
+   
+}
+.btn{
+    margin-top:0px;
+    margin-left: 30px;
+    width: 332px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border-radius: 5px;
+    border:none;
+    background: url(/bgrheader.png);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+p{
+   margin-top: 15px;
+   margin-left: 110px;
+}
+.text-f{
+    font-size: 16px;
+}
