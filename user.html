@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Danh sách người dùng đã đăng ký</title>
+</head>
+<body>
+  <h1>Danh sách người dùng đã đăng ký:</h1>
+<div id="list">
+</div>
+<div class="" id="list2"></div>
+  <script>
+  var userlist=localStorage.getItem('productlist')
+  var list =  document.getElementById('list');
+  var list2 =  document.getElementById('list2');
+  var newAccount = localStorage.getItem('accounts')
+ list.innerHTML = userlist;
+  </script>
+</body>
+</html>

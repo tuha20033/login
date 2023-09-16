@@ -60,8 +60,11 @@
         </form>
     </div>
     <script>
+
+   
     var btn = document.getElementById('btn-signup')
         btn.onclick = function(){
+           
              const user = document.getElementById('user');
              const flname = document.getElementById('flname');
              const email = document.getElementById('email');
@@ -71,6 +74,7 @@
              const phone_check = document.getElementById('phone').value;
              const regex = /!@#$%^&*(),.?":{}|<>]/;
             const adress = document.getElementById('adress')
+           
                 var flag = false;
                 if((flname.value.length>=8)
                 &&(flname.value.length<=50)
@@ -85,7 +89,7 @@
                 {flag=true};
                 if(flag==true){
                     user_data= user.value;
-                    localStorage.setItem("user",user_data);
+                    localStorage.setItem("user",user_data) ;
                     email_data= email.value;
                     localStorage.setItem("email",email_data);
                     flname_data = flname.value;
@@ -95,38 +99,67 @@
                     adress_data= adress.value;
                     localStorage.setItem("adress",adress_data);
                     password_data = password.value;
-                    localStorage.setItem("password",password_data);
+                    localStorage.setItem("password", password_data);
+                     
+
+                    
+           
                     alert('Đăng ký thành công hệ thống sẽ đưa bạn đến trang đăng nhập ')
                     window.open('./login.html')
                 }
-                else  {alert("Đăng ký không thành công xin vui lòng thử lại ");};
-            }
+                else
+                  {alert("Đăng ký không thành công xin vui lòng thử lại ");}
+
+            const itemName  = localStorage.getItem('productlist') ? JSON.parse(localStorage.getItem('productlist')) : [];
+      let object = {
+                user:user.value,
+                password:password.value,
+                email:email.value,
+                flname:flname.value,
+                phone:phone.value,
+                adress:adress.value,
+                 }
+                
+                var productlist =localStorage.getItem('productlist');
+                if(productlist){
+                 itemName  = JSON.parse(productlist);
+                itemName.push(object);
+                objeck.save();
+                localStorage.setItem("productlist",JSON.stringify(itemName))
+                }
+                else{
+                localStorage.setItem("productlist",JSON.stringify([object]))
+                }
+    
+    
+    }
+    
             // ẩn hiên mật khẩu input
-      var password = document.getElementById('password');
+    var password_iocn1 = document.getElementById('password');
       
       var icon= document.getElementById('icon');
       icon.addEventListener("click",function(){
-        if (password.type === 'password')
+        if (password_iocn1.type === 'password')
          {
-              password.type = 'text';
+              password_iocn1.type = 'text';
               
   } else {
-              password.type = 'password';
+              password_iocn1.type = 'password';
              
   }
       })
-     var password2 = document.getElementById('password2');
+     var password_icon = document.getElementById('password2');
       var icon1= document.getElementById('icon1');
       icon1.addEventListener("click",function(){
-        if (password2.type === 'password')
+        if (password_icon.type === 'password')
          {
-              password2.type = 'text';
+              password_icon.type = 'text';
               
   } else {
-              password2.type = 'password';
+              password_icon.type = 'password';
              
   }
       })
-            </script>
+      </script>
 </body>
-</html>
+</html>     

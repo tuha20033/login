@@ -13,11 +13,8 @@
         <div class="main">
             <div class="header"> Login Form</div>
             <form action="" class="form">
-               <div class="form-user"><div class="bgr-icon"><i class="fa-solid fa-user user icon "></i></div><input type="email" class="form-ip" size="39px" placeholder="Email " id="email" required></div>
-               <div class="form-password"><div class="bgr-icon"><i class="fa-solid fa-lock  pass icon"></i></div><input type="password" class="form-ip "size="39px" placeholder="password" id="password" required></div> 
-               <label for="">
-                <a href="">Forget password?</a>
-               </label>
+               <div class="form-user"><input type="email" class="form-ip" size="39px" placeholder="Email " id="email" required><i class="fa-solid fa-user user icon "></i>  </div>
+               <div class="form-password"><input type="password" class="form-ip "size="39px" placeholder="password" id="password" required><i class="fa-solid fa-lock  pass icon"></i></div> 
                <label for="">
                 <a href="">Forget password?</a>
                </label>
@@ -27,22 +24,24 @@
         </div>
     </div>
     <script>
-       
        var btnlogin = document.getElementById('btn-login')
       btnlogin.onclick = function(){
-    const email = document.getElementById('email')
-    const password = document.getElementById('password')
-    if( (localStorage.getItem("email") == email.value)
-        &&(localStorage.getItem("password") == password.value)
+        const email = document.getElementById('email')
+        const password = document.getElementById('password')   
+    const itemName = localStorage.getItem('productlist') ? JSON.parse(localStorage.getItem('productlist')) : [];
+    if( 
+       
+       ( localStorage.getItem('email')==email.value)&& (  localStorage.getItem('password')==password.value)
     ){
        localStorage.setItem("signincheck","true")
        alert("Đăng nhập thành công hệ thống sẽ đưa bạn về trang chủ")
-       window.location.href = "#"
+       window.open('./user.html')
     }
     else{
         alert(" Sai tên đăng nhập hoặc mật khẩu ")
     }
-}
+      }
+
     </script>
 </body>
 </html>
