@@ -9,20 +9,18 @@
      <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
         <div class="main">
             <div class="header"> Login Form</div>
             <form action="" class="form">
                <div class="form-user"><input type="email" class="form-ip" size="39px" placeholder="Email " id="email" required><i class="fa-solid fa-user user icon "></i>  </div>
                <div class="form-password"><input type="password" class="form-ip "size="39px" placeholder="password" id="password" required><i class="fa-solid fa-lock  pass icon"></i></div> 
-               <label for="">
+               <label for="" class="label">
                 <a href="">Forget password?</a>
                </label>
             </form> 
                 <button class="btn" id="btn-login">Login</button>
               <div class="text-f">  <p>Not a menber?<a href="./signup.html"> Singup now</a></p></div>
         </div>
-    </div>
     <script>
        var btnlogin = document.getElementById('btn-login')
       btnlogin.onclick = function(){

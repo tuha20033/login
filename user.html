@@ -7,13 +7,39 @@
   <h1>Danh sách người dùng đã đăng ký:</h1>
 <div id="list">
 </div>
-<div class="" id="list2"></div>
+<table border="1px" cellspacing="0" cellpadding="10px" id="table_content">
+ 
+</table>
   <script>
-  var userlist=localStorage.getItem('productlist')
-  var list =  document.getElementById('list');
-  var list2 =  document.getElementById('list2');
-  var newAccount = localStorage.getItem('accounts')
- list.innerHTML = userlist;
+const itemName  = localStorage.getItem('productlist') ? JSON.parse(localStorage.getItem('productlist')) : [];
+var table_content = document.getElementById('table_content')
+
+let list_user =`<tr>
+  <th>TT</th>
+    <th>User</th>
+    <th>First and last name</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Adress</th>
+  </tr>`
+  itemName.map((value,index)=>{
+    list_user +=`<tr>
+   <td>${index+1}</td>
+    <td>${value.user}</td>
+    <td>${value. flname}</td>
+    <td>${value. phone}</td>
+    <td>${value. email}</td>
+    <td>${value.password}</td>
+    <td>${value. adress}</td>
+  </tr>`
+  })
+  table_content.innerHTML =list_user;
+  
+  // const itemName  = localStorage.getItem('productlist') ? JSON.parse(localStorage.getItem('productlist')) : [];
+  // var table_content = document.getElementById('table_content')
+  // localStorage.getItem('list')
+  // table_content.innerHTML = list;
   </script>
 </body>
 </html>

@@ -1,0 +1,55 @@
+/* <!-- mobile width < 740px -->
+<!-- tablet width > 740px and width < 1024px -->
+<!-- pc width>=1024px --> */
+@media screen and ( max-width:46.1875em){
+    .input-box input{
+         max-height:30px;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .wrapper{
+        max-width: 400px;
+    }
+    .wrapper .input-box{
+        width: 100%;
+        height: 10px;
+        margin: 10px 0;
+        margin-top: 5px;
+        padding:15px;
+    }
+    .wrapper{
+        transform: translateY(-5%);
+    }
+    .wrapper  .btn{
+        max-height: 30px;
+        max-width: 330px;
+        margin-left: 4.5%;
+        margin-top:15px;
+    }
+    .wrapper h1{
+        font-size: 30px;
+    }
+    .input-box i{
+        position: absolute;
+        right: 80px;
+        transform: translateY(30%);
+       font-size: 15px;
+       /* transform: translateX(2px); */
+    }
+}
+@media screen and ( max-width:447px){
+    .wrapper{
+        max-width: 300px;
+    }
+    .wrapper  .btn{
+        max-height: 20px;
+        max-width: 200px;
+        margin-top:15px;
+    }
+}
+@media screen and ( min-width:46.3125em) and (max-width:63.9375em){
+ 
+}
+@media screen and ( min-width:64em){
+   
+}
