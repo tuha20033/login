@@ -88,3 +88,67 @@ font-weight: 600;
 .register-link span a:hover{
     text-decoration: underline;
 }
+.toast_body{
+    box-shadow: 0 0 10px rgba(0, 0,0, .2);
+    border-radius: 5px;
+    font-size: 14px;
+   
+} 
+#user:in-range{
+    border: 1px solid green;
+}
+#user:out-of-range{
+    border:1px solid red;
+}
+#a{
+    position: fixed;
+    top:100px;
+    right:190px;
+    display: none;
+    animation: slide ease 0.5s,fadeout linear 1s 3s forwards;
+}
+#b{
+    position: fixed;
+    top:120px;
+    right:190px;
+    display: none;
+    animation: slide ease 0.5s,fadeout linear 1s 3s forwards;
+}
+#c{
+    position: fixed;
+    top:130px;
+    right:190px;
+    display: none;
+    animation: slide ease 0.5s,fadeout linear 1s 3s forwards;
+}
+#d{
+    position: fixed;
+    top:140px;
+    right:190px; display: none;
+    animation: slide ease 0.5s,fadeout linear 1s 3s forwards;
+}
+#e{
+    position: fixed;
+    top:150px;
+    right:190px; display: none;
+    animation: slide ease 0.5s,fadeout linear 1s 3s forwards;
+}
+/* .toast{
+   
+    animation: slide ease 0.5s,fadeout linear 1s 3s forwards;
+} */
+@keyframes slide {
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+        
+    }
+}
+@keyframes fadeout{
+to {
+    opacity: 0;
+}
+}
