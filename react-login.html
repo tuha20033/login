@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.min.css">
+     <link rel="stylesheet" href="./style.css">
+     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body id =tu>
+       
+    <script>
+        const main =  React.createElement('div',{
+            className:'main',
+        }, React.createElement('div',{ className:'header'},'Login Form'),
+           React.createElement('form',{ className:'form'},
+           React.createElement('div',{ className:'form-user'},
+           React.createElement('input',{ className:"form-ip", type:"email" , size:"200px" ,placeholder:"Email", id:"email", required:true,style:{ width:'300px'}},
+           ) , React.createElement('i',{className:'fa-solid fa-user user icon' }) )
+           ,React.createElement('div',{ className:'form-password'},
+           React.createElement('input',{ type:"password" ,className:"form-ip", size:"200px" ,placeholder:"password", id:"password", required:true,style:{ width:'300px'}}, )
+          ,React.createElement('i',{className:'fa-solid fa-lock  pass icon' }) ),React.createElement('label',{className:'label'},
+            React.createElement('a'),null,'Forget password?')),
+            React.createElement('button',{className:"btn" ,id:"btn-login"},'Login'),
+            React.createElement('div',{className:'text-f'}, React.createElement('p',{},'Not a menber?',
+             React.createElement('a',{href:'./react_signup.html'},' Singup now')))   )
+
+           ReactDOM.render(main,document.getElementById('tu'))
+
+       var btnlogin = document.getElementById('btn-login')
+      btnlogin.onclick = function(){
+        const email = document.getElementById('email')
+        const password = document.getElementById('password')   
+    const itemName = localStorage.getItem('productlist') ? JSON.parse(localStorage.getItem('productlist')) : [];
+    if( 
+       
+       ( localStorage.getItem('email')==email.value)&& (  localStorage.getItem('password')==password.value)
+    ){
+       localStorage.setItem("signincheck","true")
+       alert("Đăng nhập thành công hệ thống sẽ đưa bạn về trang chủ")
+       window.open('./user.html')
+    }
+    else{
+        alert(" Sai tên đăng nhập hoặc mật khẩu ")
+    }
+      }
+
+    </script>
+</body>
+</html>

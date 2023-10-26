@@ -4,67 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.min.css">
     <link rel="stylesheet" href="./style1.css"> 
     <link rel="stylesheet" href="./reponsive.css">
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 </head>
-<body>
-
-    <div class="wrapper">
-        <form action="">
-            <h1>Sign up</h1>
-
-            <div class="input-box"> 
-               
-                <input type="text" name="" id="user" placeholder="User" required minlength="5" maxlength="20">
-                <i class="fa-solid fa-user user icon "></i>
-            </div>
-
-            <div class="input-box"> 
-               
-                <input type="text" name="" id="flname" placeholder="first and last name" required minlength="8" maxlength="50">
-                <i class="fa-solid fa-user user icon "></i>
-            </div>
-
-            <div class="input-box"> 
-                <input type="email" name="" id="email"  placeholder="Email" required minlength="">
-                <i class="fa-solid fa-envelope"></i>
-            </div class=btn-box>
-
-            <div class="input-box"> 
-                <input type="password" name="" id="password" placeholder="Password" required minlength="6" maxlength="20">
-                <span class="lock-icon">
-                <i class="fa-solid fa-lock lock" id="icon"></i>
-               
-            </span>
-                
-            </div>  
-            
-            <div class="input-box"> 
-                <input type="password" name="" id="password2" placeholder="Confirm password" required >
-                <span class="lock-icon">
-                <i class="fa-solid fa-lock lock" id="icon1"></i>
-                
-            </span>
-                
-            </div>
-            <div class="input-box"> 
-                <input type="tel" name="" id="phone" placeholder="Phone"  required maxlength="10" >
-                <i class="fa-solid fa-phone"></i>
-            </div>
-            <div class="input-box"> 
-                <input type="text" name="" id="adress" placeholder="adress" required maxlength="100">
-                <i class="fa-solid fa-map-location"></i>
-            </div>
-              <button class="btn" type="submit" id="btn-signup">Sign up</button>
-          
-        </form>
-    </div>
+<body class = 'tu' id ='tu'>
     <script>
+        const wrapper = React.createElement('div',{
+            className:'wrapper'
+        },  React.createElement('form',{},
+            React.createElement('h1',{},'Sign up'),
+            React.createElement('div',{
+                className :'input-box'
+            },  React.createElement('input',{type:'text',id:'user', placeholder:"User",minlength:"5", maxlength:"20",required:true}),
+                 React.createElement('i',{ clasName:'fa-solid fa-user user icon '},)),
+            React.createElement('div',{
+                className :'input-box'
+            },  React.createElement('input',{type:'text',id:'user', placeholder:"first and last name",minlength:"5", maxlength:"20",required:true}),
+                 React.createElement('i',{ clasName:'fa-solid fa-user user icon '},)),
+                 React.createElement('div',{
+                className :'input-box'
+            },  React.createElement('input',{type:'text',id:'user', placeholder:"Email",minlength:"5", maxlength:"20",required:true}),
+                 React.createElement('i',{ clasName:'fa-solid fa-user user icon '},)),
 
-   
-    var btn = document.getElementById('btn-signup')
+                 React.createElement('div',{
+                className :'input-box'
+            },  React.createElement('input',{type:'text',id:'user', placeholder:"Password",minlength:"5", maxlength:"20",required:true}),
+                 React.createElement('i',{ clasName:'fa-solid fa-user user icon '},)),
+
+                 React.createElement('div',{
+                className :'input-box'
+            },  React.createElement('input',{type:'text',id:'user', placeholder:"Confirm password",minlength:"5", maxlength:"20",required:true}),
+                 React.createElement('i',{ clasName:'fa-solid fa-user user icon '},)),
+
+                 React.createElement('div',{
+                className :'input-box'
+            },  React.createElement('input',{type:'text',id:'user', placeholder:"Phone",minlength:"5", maxlength:"20",required:true}),
+                 React.createElement('i',{ clasName:'fa-solid fa-user user icon '},)),
+
+                 React.createElement('div',{
+                className :'input-box'
+            },  React.createElement('input',{type:'text',id:'user', placeholder:"adress",minlength:"5", maxlength:"20",required:true}),
+                 React.createElement('i',{ clasName:'fa-solid fa-user user icon '},)),
+                 React.createElement('button',{
+                    className:'btn',
+                    id:'btn-signup',
+                    type:'submit',
+                 },"Sign up")       
+        )
+        )
+        ReactDOM.render(wrapper,document.getElementById('tu'))
+
+
+
+
+
+
+
+        var btn = document.getElementById('btn-signup')
         btn.onclick = function(){
              const user = document.getElementById('user');
              const flname = document.getElementById('flname');
@@ -96,11 +95,11 @@
                     
                     // d.style.display="block"
                 }
-            var a = document.getElementById('a')
-           var b = document.getElementById('b')
-           var c = document.getElementById('c')
-           var d = document.getElementById('d')
-            var e = document.getElementById('e')
+        //     var a = document.getElementById('a')
+        //    var b = document.getElementById('b')
+        //    var c = document.getElementById('c')
+        //    var d = document.getElementById('d')
+        //     var e = document.getElementById('e')
            
                 var flag = false;
                 if((flname.value.length>=8)
@@ -192,9 +191,6 @@
              
   }
       })
-      </script>
-
-   
+    </script>
 </body>
-
-</html>    
+</html>
